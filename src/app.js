@@ -13,7 +13,7 @@ const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
 
 
-// Setu handlebars engine and views location
+// Setup handlebars engine and views location
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
@@ -63,12 +63,6 @@ app.get('/weather', (req, res) => {
             })
         })
     })
-    
-    // res.send({
-    //     forecast: 'It is snowing',
-    //     location: 'Philadelphia',
-    //     address: req.query.address
-    // })
 })
 
 app.get('/products', (req,res) => {
